@@ -17,7 +17,7 @@ CLASS ZMB_REST_HTTP_HANDLER IMPLEMENTATION.
 
   METHOD if_rest_application~get_root_handler.
     DATA(router) = NEW cl_rest_router( ).
-    router->attach( iv_template = `/result.json` iv_handler_class = 'zmb_rest_service' ).
+    router->attach( iv_template = `/result.json` iv_handler_class = 'ZMB_REST_SERVICE' ).
     ro_root_handler = router.
   ENDMETHOD.
 ENDCLASS.
