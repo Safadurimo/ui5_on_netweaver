@@ -1,0 +1,13 @@
+<mvc:View controllerName="ui5_on_netweaver.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+	<f:SimpleForm  layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
+		labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+		singleContainerFullSize="false">
+		<f:content>
+			<Label text="Number"/>
+			<Input id="nameText" submit="handleSubmit"/>
+			<Label text="Number plus 1"/>
+			<Text text= "{/DATA/NUMBERPLUSONE}" />
+		</f:content>
+	</f:SimpleForm>
+</mvc:View>
