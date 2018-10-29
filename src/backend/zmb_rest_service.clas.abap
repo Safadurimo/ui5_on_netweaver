@@ -10,7 +10,7 @@ CLASS zmb_rest_service DEFINITION
   PRIVATE SECTION.
    TYPES:
       BEGIN OF result,
-        number  TYPE i,
+        numberplusone  TYPE i,
       END OF result.
 ENDCLASS.
 
@@ -27,7 +27,7 @@ CLASS ZMB_REST_SERVICE IMPLEMENTATION.
     number_as_string = mo_request->get_uri_query_parameter( 'number ').
     number_as_int = number_as_string.
 
-    DATA(result) = value result( number = ( number_as_int + 1 ) ).
+    DATA(result) = value result( numberplusone = ( number_as_int + 1 ) ).
 
     DATA(writer) = cl_sxml_string_writer=>create( type = if_sxml=>co_xt_json ).
     CALL TRANSFORMATION id SOURCE data = result RESULT XML writer.
